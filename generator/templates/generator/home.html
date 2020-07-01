@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<div class="container text-center">
+  <h1>Password Generator</h1>
+  <div class="">
+    <a href="{% url 'home' %}" style="margin:10px">Home</a>
+    <a href="{% url 'about' %}">About</a>
+  </div>
+  <br>
+  <h4>
+    <p>
+      The password will include lowercase letters by default. Choose the length and any additional charater types you would like
+      your password to contain.
+    </p>
+  </h4>
+  <br>
+  <form action = "{% url 'password' %}">
+    <select name = "length">
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12" selected = "selected">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+    </select>
+    <label for="length">Password Length</label>
+    <br>
+    <input type="checkbox" name="uppercase" value="y">
+    <label for="uppercase">Uppercase Letters</label>
+    <br>
+    <input type="checkbox" name="numbers" value="y">
+    <label for="numbers">Numbers</label>
+    <br>
+    <input type="checkbox" name="special" value="y">
+    <label for="special">Special Characters</label>
+    <br>
+    <br>
+
+    <input type="submit" name="" value="Generate Password" class="btn btn-primary">
+  </form>
+</div>
