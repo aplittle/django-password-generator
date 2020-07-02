@@ -25,7 +25,10 @@ SECRET_KEY = 'c&^=(=r44h(kx1-3x_ad-l2mn#t=t6(8d6y)=h3et8a%w0^hk%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aplittle78.pythonanywhere.com']
+ALLOWED_HOSTS = ['aplittle78.pythonanywhere.com',
+                 'localhost',
+                 '127.0.0.1',
+]
 
 
 # Application definition
