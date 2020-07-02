@@ -1,18 +1,11 @@
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-<div class="container text-center">
-  <h1>Password Generator</h1>
+{% extends "generator/base.html" %}
+{% block content %}
+  <br>
   <div class="">
-    <a href="{% url 'home' %}" style="margin:10px">Home</a>
-    <a href="{% url 'about' %}">About</a>
+    <h3>About Password Generator</h3>
+    <p>
+      Password Generator is a website that will generator a password built to the users specifications. The user can choose the Password
+      length, choose to add uppercase letters, numbers, and special characters.
+    </p>
   </div>
-  <div class="">
-    <h2>About Password Generator</h2>
-    <h3>
-      <p>
-        Password Generator is a website that will generator a password built to the users specifications. The user can choose the Password
-        length, choose to add uppercase letters, numbers, and special characters.
-      </p>
-    </h3>
-  </div>
-</div>
+{% endblock content %}

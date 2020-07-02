@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import random, string
 
 def home(request):
-    return render(request, 'generator/home.html', {'password':'akakmdkmoalem'})
+    return render(request, 'generator/home.html', {'title':'Home'})
 
 def password(request):
     lcase = string.ascii_lowercase
