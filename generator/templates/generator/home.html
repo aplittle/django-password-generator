@@ -1,18 +1,10 @@
 {% extends "generator/base.html" %}
 {% block content %}
-<div class="container text-center">
-  <h1>Password Generator</h1>
-  <div class="">
-    <a href="{% url 'home' %}" style="margin:10px">Home</a>
-    <a href="{% url 'about' %}">About</a>
-  </div>
   <br>
-  <h4>
     <p>
       The password will include lowercase letters by default. Choose the length and any additional charater types you would like
       your password to contain.
     </p>
-  </h4>
   <br>
   <form action = "{% url 'password' %}">
     <select name = "length">
@@ -41,5 +33,4 @@
 
     <input type="submit" name="" value="Generate Password" class="btn btn-primary">
   </form>
-</div>
 {% endblock content %}
