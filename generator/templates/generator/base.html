@@ -12,10 +12,14 @@
     {% else %}
       <title>Password Generator</title>
     {% endif %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body style="font-family: 'Roboto Mono', 'monospace';">
+    <div class="container text-center">
+      <h1>dope ass web apps</h1>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-     <h2><a class="navbar-brand" href="#">Password Generator</a></h2>
+     <h2><a class="navbar-brand" href="{% url 'dashboard' %}">Dashboad</a></h2>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,9 +30,6 @@
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'about' %}">About Page</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
           </li>
         </ul>
       </div>

@@ -1,5 +1,20 @@
 {% extends 'dashboard/base.html' %}
 
 {% block content %}
-<h1>Dashboard</h1>
+<br>
+<h1 style="text-align: center;">Dashboard</h1>
+<br>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-sm">
+      <a href="{% url 'generator_home' %}"><button type="button" class="btn btn-primary btn-circle btn-xl">Password Generator</button></a>
+    </div>
+    <div class="col-sm">
+      <a href="#"><button type="button" class="btn btn-primary btn-circle btn-xl">Loot Tracker</button></a>
+    </div>
+    <div class="col-sm">
+      <a href="#"><button type="button" class="btn btn-primary btn-circle btn-xl"></button></a>
+    </div>
+  </div>
+</div>
 {% endblock content %}

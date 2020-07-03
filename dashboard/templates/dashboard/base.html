@@ -12,25 +12,36 @@
     {% else %}
       <title>Dashboad</title>
     {% endif %}
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style media="screen">
+      .btn-circle.btn-xl {
+          width: 150px;
+          height: 150px;
+          padding: 10px;
+          border-radius: 80px;
+          font-size: 20px;
+          text-align: center;
+      }
+    </style>
   </head>
-  <body>
+  <body style="font-family: 'Roboto Mono', 'monospace';">
+    <div class="container text-center">
+      <h1>dope ass web apps</h1>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-     <h2><a class="navbar-brand" href="#">Aaron's Dashboard</a></h2>
+     <h2><a class="navbar-brand" href="#"></a></h2>
      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'generator_home' %}">Password Generator<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
+            <!-- <a class="nav-link" href="{% url 'generator_home' %}">Password Generator<span class="sr-only">(current)</span></a> -->
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container text-center">
+    <div class="container">
       {% block content %}
       {% endblock %}
     </div>
