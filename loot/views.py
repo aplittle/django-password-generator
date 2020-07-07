@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def loot_home(request):
+def home(request):
   return render(request, '/loot/home.html')
