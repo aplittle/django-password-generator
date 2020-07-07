@@ -20,5 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('generator_home/', include('generator.urls')),
     path('', include('dashboard.urls')),
-    path('loot/', include('loot.urls')),
+    path('loot_home/', include('loot.urls')),
 ]
