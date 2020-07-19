@@ -26,6 +26,7 @@ SECRET_KEY = 'c&^=(=r44h(kx1-3x_ad-l2mn#t=t6(8d6y)=h3et8a%w0^hk%'
 DEBUG = True
 
 ALLOWED_HOSTS = ['www.dopeasswebappz.com',
+                 'dawa-aplittle78415206.codeanyapp.com',
                  'localhost',
                  '127.0.0.1',
 ]
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'generator',
     'dashboard',
     'loot',
+    'rps',
 ]
 
 MIDDLEWARE = [
@@ -126,5 +128,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = ''
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

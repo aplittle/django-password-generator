@@ -1,0 +1,95 @@
+{% extends "loot/base.html" %}
+
+{% block content %}
+<div class="container">
+  <br>
+  <div class="row">
+    <div class="col">
+      <h2>Add new lootZ</h2>
+    </div>
+  </div>
+  <div class="row text-left">
+    <div class="col">
+      <form action="{% url 'add_new_loot' %}" method="POST" id="addloot">
+        {% csrf_token %}
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <select class="form-control" id="quantity" name="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option> 
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="desc">Description</label>
+              <input class="form-control" type="text" id="desc" name="desc">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="est_value">Est. Value</label>
+              <input class="form-control" type="number" id="est_value" name="est_value">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="coin_type">Coin Type</label>
+              <select class="form-control" id="coin_type" name="coin_type">
+                <option>--Select Coin--</option>
+                <option value="p">Platnum</option>
+                <option value="g">Gold</option>
+                <option value="e">Electrum</option>
+                <option value="s">Silver</option>
+                <option value="c">Copper</option>
+              </select>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="calc_type">Calc. Type</label>
+              <select class="form-control" id="calc_type" name="calc_type">
+                <option value="each">Each</option>
+                <option value="total">Total</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label for="notes">Notes</label>
+              <input class="form-control" type="text" id="notes" name="notes">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-secondary" onclick="lootHome()">Cancel</button>
+            <button type="submit" class="btn btn-secondary" form="addloot">Save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  function lootHome(){
+    window.location.href="{% url 'loot_home' %}";
+   }
+ </script>
+{% endblock content %}
